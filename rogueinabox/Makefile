@@ -39,6 +39,7 @@ installdeps:
 		pip install -r requirements.txt; \
 		git clone https://github.com/Theano/libgpuarray.git /tmp/_libgpuarray_git; \
 		cd /tmp/_libgpuarray_git; \
+		git checkout v0.6.5; \
 		python setup.py build; \
 		python setup.py install; \
 		rm -rf /tmp/_libgpuarray_git; \
