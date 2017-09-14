@@ -1,4 +1,4 @@
-Rogueinabox
+Rogueinabox: a Rogue environment for AI learning
 ==========
   Rogueinabox is a higly modular learning environment built around the videogame Rogue, the father of the roguelike genre.
   It offers easy ways to interact with the game and a whole framework to build, customize and run learning agents.
