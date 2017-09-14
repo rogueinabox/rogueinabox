@@ -1,0 +1,8 @@
+git+https://github.com/selectel/pyte.git@211541f649c0e8c19a1575ae1ee1c33d6f6f4180
+keras
+theano
+tensorflow
+h5py
+scipy
+scikit-image
+cython

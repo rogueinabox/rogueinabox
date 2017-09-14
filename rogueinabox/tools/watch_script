@@ -1,0 +1,28 @@
+#Copyright (C) 2017 Andrea Asperti, Carlo De Pieri, Gianmaria Pedrini
+#
+#This file is part of Rogueinabox.
+#
+#Rogueinabox is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#Rogueinabox is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#run with watch -n 0.5 ./watch_script, in the assets folder
+tail -20000 very_long_logfile.log | grep "Iteration" | tail -1
+tail -20000 very_long_logfile.log | grep "History" | tail -1
+tail -20000 very_long_logfile.log | grep "Loss" | tail -1
+tail -20000 very_long_logfile.log | grep "action array" | tail -1
+tail -20000 very_long_logfile.log | grep "observe done" | tail -1
+
+echo ""
+ls -lah history.pkl
+echo ""
+free -h

@@ -1,0 +1,54 @@
+[General]
+# rogue executable path
+rogue = rogue
+# rogomatic executable path
+rogomatic = rogomatic
+# the mode; can be play or learn
+mode = play
+# the agent; must be a classname from agents.py
+agent = UserAgent
+# the user interface; can be tk or curses
+userinterface = tk
+# verbosity level
+verbose = 3
+# enable remote debug
+remote_debug = True
+# enable the ui (tk or curses)
+gui = True
+# the delay between each action in gui mode (in ms)
+gui_delay = 100
+
+[State]
+# the state generator; must be a classname from states.py
+state_generator = M_P_D_S_Sn_StateGenerator
+
+[Model]
+# the model manager; must be a classname from models.py
+model_manager = T_5L_Ml_Nr_ModelManager
+
+[Reward]
+# the reward generator; must be a classname from rewards.py
+reward_generator = E_D_Ps_Pp_W_RewardGenerator
+
+[History]
+# the history manager; must be a classname from history.py
+history_manager = FIFORandomPickHM
+# enable history saving (uses more ram)
+save_history = False
+# history size at wich the training starts
+minhist = 5000
+# maximum history size
+histsize = 100000
+
+
+[Training]
+# training parameters
+initial_epsilon = 1
+final_epsilon = 0.001
+epsilon = 1
+explore_steps = 500000
+batchsize = 32
+gamma = 0.99
+# disable illegal actions
+#(walking against walls and descending without stairs beneath)
+only_legal_actions = False
