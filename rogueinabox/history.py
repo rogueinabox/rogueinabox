@@ -80,7 +80,7 @@ class FIFORandomPickHM(HistoryManager):
         return True if an item was added, False otherwise
         """
         self._history.appendleft((self.agent.old_state, action_index, reward, self.agent.state, terminal))
-        if len(self._history) > self.agent.parameters["histsize"]:
+        if len(self._history) > self.agent.config["histsize"]:
             self._history.pop()
         return True
 
@@ -117,7 +117,7 @@ class NearDoorRandomPickHM(HistoryManager):
         if (reward > 0) or (random.random() < self._distance_from_door(self.agent.state[0])**-2.):  
             self._history.appendleft((self.agent.old_state, action_index, reward, self.agent.state, terminal))
             item_added = True
-        if len(self._history) > self.agent.parameters["histsize"]:
+        if len(self._history) > self.agent.config["histsize"]:
             self._history.pop()
         return item_added
 
@@ -136,10 +136,10 @@ class StatisticBalanceRandomPickHM(HistoryManager):
         return True if an item was added, False otherwise
         """
         item_added = False
-        if (reward >= 0) or (self.agent.parameters["iteration"] % 7 == 0):
+        if (reward >= 0) or (self.agent.config["iteration"] % 7 == 0):
             self._history.appendleft((self.agent.old_state, action_index, reward, self.agent.state, terminal))
             item_added = True
-        if len(self._history) > self.agent.parameters["histsize"]:
+        if len(self._history) > self.agent.config["histsize"]:
             self._history.pop()
         return item_added
 
@@ -162,7 +162,7 @@ class StatisticBalance2RandomPickHM(HistoryManager):
         if reward > 0 or (reward < 0 and random.random() < 0.2):
             self._history.appendleft((self.agent.old_state, action_index, reward, self.agent.state, terminal))
             item_added = True
-        if len(self._history) > self.agent.parameters["histsize"]:
+        if len(self._history) > self.agent.config["histsize"]:
             self._history.pop()
         return item_added
 
