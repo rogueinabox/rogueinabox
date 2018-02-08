@@ -11,7 +11,7 @@ Rogueinabox: a Rogue environment for AI learning
 
 Members
 -------
-* Andrea Asperti, Professor at University of Bologna
+* [Andrea Asperti](https://github.com/asperti), Professor at University of Bologna
 * [Carlo De Pieri](https://github.com/CarloDePieri), Student at University of Bologna
 * [Gianmaria Pedrini](https://github.com/ElGullo), Student at University of Bologna
 
